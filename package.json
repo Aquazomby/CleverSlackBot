@@ -1,0 +1,50 @@
+{
+  "name": "slack-cleverbot",
+  "version": "0.0.4",
+  "description": "I'm not a bot, are you?",
+  "keywords": [
+    "Slack",
+    "bot",
+    "cleverbot",
+    "jokes"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/phillaf/slack-cleverbot"
+  },
+  "bugs": {
+    "url": "https://github.com/phillaf/slack-cleverbot/issues"
+  },
+  "main": "dist/index.js",
+  "files": [
+    "dist/"
+  ],
+  "scripts": {
+    "start": "babel-node example",
+    "start:dev": "nodemon example --exec babel-node",
+    "build": "npm run clean && babel src -d dist",
+    "clean": "rimraf dist",
+    "prepublish": "npm run clean && npm run build"
+  },
+  "author": {
+    "name": "Philippe Lafrance",
+    "email": "phil@gintonicweb.com"
+  },
+  "contributors": [
+    "Development crew (https://github.com/Phillaf/slack-cleverbot/network/members)"
+  ],
+  "license": "MIT",
+  "engines": {
+    "node": ">=0.10.0"
+  },
+  "dependencies": {
+    "cleverbot.io": "^1.0.4",
+    "lodash.sample": "^4.2.1",
+    "slackbots": "^1.0.2"
+  },
+  "devDependencies": {
+    "babel-cli": "^6.18.0",
+    "babel-preset-env": "^1.1.6",
+    "rimraf": "^2.5.4"
+  }
+}
